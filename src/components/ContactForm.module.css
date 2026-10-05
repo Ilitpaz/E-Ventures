@@ -1,0 +1,11 @@
+.form { display: grid; gap: var(--space-5); max-width: 36rem; }
+.pair { display: grid; gap: var(--space-5); grid-template-columns: 1fr; }
+@media (min-width: 40rem) { .pair { grid-template-columns: 1fr 1fr; } }
+.form label { display: grid; gap: var(--space-2); font-size: var(--text-sm); color: var(--color-ink-soft); }
+.form input, .form select, .form textarea {
+  font: inherit; color: var(--color-ink); background: transparent;
+  border: 0; border-bottom: var(--border-ink); border-radius: 0; padding: 0.55rem 0;
+}
+.form textarea { border: var(--border-thin); border-radius: var(--radius-md); padding: 0.75rem; }
+.form button { justify-self: start; }
+.notice { font-size: var(--text-sm); border-inline-start: 2px solid var(--color-ink); padding-inline-start: var(--space-3); }

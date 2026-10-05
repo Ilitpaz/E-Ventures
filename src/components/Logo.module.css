@@ -1,0 +1,4 @@
+.frame { display: block; overflow: hidden; aspect-ratio: 3.4 / 1; }
+.md { width: 9.5rem; }
+.lg { width: min(34rem, 88vw); aspect-ratio: 2.9 / 1; }
+.img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 52%; mix-blend-mode: multiply; }

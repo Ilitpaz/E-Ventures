@@ -1,0 +1,5 @@
+.hero { padding-block: var(--space-8) var(--space-9); text-align: center; }
+.inner { display: flex; flex-direction: column; align-items: center; }
+.slogan { font-size: var(--text-hero); margin: var(--space-5) 0 var(--space-5); }
+.text { max-width: 38rem; margin-bottom: var(--space-6); }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-3); justify-content: center; }

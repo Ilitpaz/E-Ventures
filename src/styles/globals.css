@@ -1,0 +1,39 @@
+@import "./tokens.css";
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+}
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; text-underline-offset: 0.25em; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: var(--leading-tight); margin: 0 0 var(--space-4); }
+p { margin: 0 0 var(--space-4); }
+:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 3px; }
+
+.container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+.narrow { max-width: var(--container-narrow); }
+.section { padding-block: var(--space-9); }
+.section--soft { background: var(--color-bg-soft); }
+.eyebrow { font-size: var(--text-xs); letter-spacing: 0.08em; color: var(--color-ink-faint); margin-bottom: var(--space-3); }
+.h-section { font-size: var(--text-2xl); }
+.lead { font-size: var(--text-lg); color: var(--color-ink-soft); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.85rem 1.8rem; border-radius: var(--radius-pill);
+  border: var(--border-ink); background: transparent; color: var(--color-ink);
+  font: inherit; font-size: var(--text-sm); text-decoration: none; cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.btn:hover { background: var(--color-ink); color: var(--color-bg); }
+.btn--solid { background: var(--color-ink); color: var(--color-bg); }
+.btn--solid:hover { background: transparent; color: var(--color-ink); }
+
+.botanical-rule { border: 0; border-top: var(--border-thin); margin: 0; }
