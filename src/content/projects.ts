@@ -117,7 +117,43 @@ export const projects: Project[] = [
     status: "live",
     copyStatus: "draft",
     tags: ["רב־משתמשים", "פרויקטים", "ספקים", "תקציבים"],
-    screenshots: [],
+    screenshots: [
+      {
+        "image": "/screenshots/e-team/e-team-07-workspace.jpg",
+        "title": "העבודה שייכת לארגון",
+        "description": "מרחב הארגון מרכז חברים, תפקידים ופרויקטים משותפים, לצד מדיניות אישורים ארגונית."
+      },
+      {
+        "image": "/screenshots/e-team/e-team-01-dashboard.jpg",
+        "title": "תמונת מצב שמכוונת לפעולה",
+        "description": "מסך העבודה מרכז אישורים ממתינים, פרויקטים בתנועה ומשימות קרובות של המשתמשת."
+      },
+      {
+        "image": "/screenshots/e-team/e-team-02-project.jpg",
+        "title": "פרויקט אחד, כל מרכיבי העבודה",
+        "description": "סקירת הפרויקט מחברת בין משימות, ספקים, הצעות, אישורים ותקציב בתוך מרחב הארגון."
+      },
+      {
+        "image": "/screenshots/e-team/e-team-03-tasks.jpg",
+        "title": "ברור מי עושה מה ועד מתי",
+        "description": "משימה בפרויקט מציגה אחריות, דדליין, סטטוס ופעולות להמשך הטיפול."
+      },
+      {
+        "image": "/screenshots/e-team/e-team-04-suppliers.jpg",
+        "title": "הספקים כחלק מהפרויקט",
+        "description": "הדמו מציג את שיוך הספקים לפרויקט ואת מצב ההתקשרות איתם; אזור זה עדיין בהגדרה."
+      },
+      {
+        "image": "/screenshots/e-team/e-team-05-quotes.jpg",
+        "title": "השוואת הצעות על בסיס אותה בקשה",
+        "description": "הדמו ממחיש השוואת מחירים ורכיבים, סימון חריגות והפרדת חלופות; אזור זה עדיין בהגדרה."
+      },
+      {
+        "image": "/screenshots/e-team/e-team-06-budget.jpg",
+        "title": "מהתקציב המתוכנן ועד לתשלום",
+        "description": "הדמו ממחיש מעקב אחר הערכה, הצעה, אישור ותשלום לפי סעיף תקציבי; אזור זה עדיין בהגדרה."
+      }
+    ],
   },
   {
     slug: "kalab",
