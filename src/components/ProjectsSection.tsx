@@ -7,7 +7,7 @@ export function ProjectsSection() {
     <section id="projects" className="section">
       <div className="container">
         <p className="eyebrow">מיזמים</p>
-        <h2 className="h-section">פתרונות שנבנו סביב צורך אמיתי</h2>
+        <h2 className="h-section">שלושה מוצרים, שלושה צרכים שונים</h2>
         <ul className={styles.list}>
           {getProjects().map((p) => (
             <li key={p.slug} className={`${styles.item} ${p.featured ? styles.featured : ""}`}>
