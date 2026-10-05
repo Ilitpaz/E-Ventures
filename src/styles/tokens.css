@@ -2,7 +2,8 @@
  * E-Ventures design tokens — single source of truth.
  * PROVISIONAL VALUES: neutral white / black / grey placeholders so the layout can be reviewed.
  * They are NOT the approved E-Ventures palette or type choice (Heebo / Frank Ruhl Libre are
- * stand-ins too). Replace the final brand colors and fonts here only.
+ * stand-ins too). Fonts are loaded in src/styles/fonts.ts. Replace final colors/fonts centrally.
+ * Never use Clicker Script (logo-only font) for site text — see docs/BRAND.md.
  */
 :root {
   /* color */
@@ -16,8 +17,8 @@
   --color-accent: var(--color-ink); /* TODO: brand accent, when approved */
 
   /* typography */
-  --font-body: var(--font-heebo), system-ui, sans-serif;
-  --font-display: var(--font-frank), Georgia, serif;
+  --font-body: var(--font-site-body), system-ui, sans-serif; /* TBD */
+  --font-display: var(--font-site-display), Georgia, serif; /* TBD */
   --text-xs: 0.8125rem;
   --text-sm: 0.9375rem;
   --text-base: 1.0625rem;
