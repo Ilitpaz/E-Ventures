@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: "/",
     images: [{ url: "/brand/e-ventures-logo.png", alt: site.name }],
   },
-  // Favicon: src/app/icon.svg is a NEUTRAL TEMPORARY icon (not the brand favicon). Replace with the official file.
+  // Favicon: src/app/icon.png (botanical illustration, unmodified file supplied by the owner) is picked up automatically by Next.js.
   robots: { index: true, follow: true },
 };
 
