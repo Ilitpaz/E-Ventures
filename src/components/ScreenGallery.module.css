@@ -9,7 +9,7 @@
 }
 .item { flex: 0 0 82%; scroll-snap-align: start; margin: 0; }
 .frame { position: relative; aspect-ratio: 16 / 10; border: var(--border-thin); border-radius: var(--radius-md); overflow: hidden; background: var(--color-bg-soft); }
-.frame img { object-fit: cover; object-position: top; }
+.frame img { object-fit: contain; object-position: top; }
 .placeholder { position: absolute; inset: 0; display: grid; place-items: center; color: var(--color-ink-faint); font-size: var(--text-sm); }
 .item figcaption { padding-top: var(--space-4); }
 .item h3 { font-size: var(--text-lg); margin-bottom: var(--space-1); }

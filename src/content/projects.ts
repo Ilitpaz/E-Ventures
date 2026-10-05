@@ -48,7 +48,33 @@ export const projects: Project[] = [
     status: "live",
     copyStatus: "draft",
     tags: ["אתר ציבורי", "ניהול פנימי", "הרשמות", "תשלומים"],
-    screenshots: [],
+    screenshots: [
+      {
+            "image": "/screenshots/atnachta/atnachta-01-home.jpg",
+            "title": "הסטודיו פוגש את הלקוחות גם בדיגיטל",
+            "description": "האתר מציג את מגוון הפעילויות ומאפשר להגיע במהירות לחוויה המתאימה."
+      },
+      {
+            "image": "/screenshots/atnachta/atnachta-02-workshop-page.jpg",
+            "title": "מהרעיון לחוויה שאפשר להזמין",
+            "description": "עמוד הפעילות מרכז את החוויה, למי היא מתאימה ומה צריך לדעת לפני ההרשמה."
+      },
+      {
+            "image": "/screenshots/atnachta/atnachta-03-admin-lobby.jpg",
+            "title": "מרכז השליטה של הסטודיו",
+            "description": "מסך הכניסה לניהול מרכז את המידע והפעולות החשובות לעבודה היומיומית ומאפשר להגיע במהירות למה שדורש טיפול."
+      },
+      {
+            "image": "/screenshots/atnachta/atnachta-04-admin-menu.jpg",
+            "title": "מערכת אחת לעסק שלם",
+            "description": "מבט בתפריט חושף את רוחב המערכת: פעילויות, לקוחות, חוגים, תקשורת, תוכן וכלי הניהול שנבנו סביב העבודה של הסטודיו."
+      },
+      {
+            "image": "/screenshots/atnachta/atnachta-05-workshop-management.jpg",
+            "title": "מההרשמה לניהול בפועל",
+            "description": "ההרשמות מהאתר הופכות למידע תפעולי שמלווה את הסדנה ואת המשתתפים."
+      }
+],
   },
   {
     slug: "e-team",
