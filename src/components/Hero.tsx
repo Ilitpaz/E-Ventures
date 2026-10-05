@@ -11,8 +11,8 @@ export function Hero() {
         <h1 className={styles.slogan}>{site.slogan}</h1>
         <p className={`lead ${styles.text}`}>{site.heroText}</p>
         <div className={styles.actions}>
-          <Link href="/#projects" className="btn btn--solid">לצפייה במיזמים</Link>
-          <Link href="/#contact" className="btn">יש לי רעיון לאתר</Link>
+          <Link href="/#projects" className="btn btn--solid">להכיר את המיזמים</Link>
+          <Link href="/#contact" className="btn">לספר על צורך</Link>
         </div>
       </div>
     </section>
