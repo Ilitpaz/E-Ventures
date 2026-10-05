@@ -25,6 +25,9 @@ export default async function ProjectPage({ params }: Props) {
   const project = getProject((await params).slug);
   if (!project) notFound();
 
+  // Only real screenshots are shown; with none, the whole gallery section is hidden.
+  const screens = project.screenshots.filter((s) => s.image);
+
   const blocks = [
     ["מה היה הצורך", project.problem],
     ["מה רצינו לפתור", project.longDescription],
@@ -54,12 +57,14 @@ export default async function ProjectPage({ params }: Props) {
         </dl>
       </div>
 
+      {screens.length > 0 && (
       <section className="section" aria-labelledby="screens">
         <div className="container">
           <h2 id="screens" className="h-section">המסכים</h2>
         </div>
-        <ScreenGallery screens={project.screenshots} />
+        <ScreenGallery screens={screens} />
       </section>
+      )}
     </article>
   );
 }
