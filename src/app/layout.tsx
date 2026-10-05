@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: `${site.name} — ${site.slogan}`,
     description: site.description,
     url: "/",
-    images: [{ url: "/brand/e-ventures-logo-white.svg", alt: site.name }],
+    images: [{ url: "/brand/e-ventures-logo.png", alt: site.name }],
   },
   // Favicon: src/app/icon.png is picked up automatically by Next.js.
   robots: { index: true, follow: true },

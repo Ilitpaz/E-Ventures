@@ -6,12 +6,12 @@ export function Logo({ size = "md", priority = false }: { size?: "md" | "lg"; pr
   return (
     <span className={`${styles.frame} ${styles[size]}`}>
       <Image
-        src="/brand/e-ventures-logo-white.svg"
+        src="/brand/e-ventures-logo.png"
         alt="E-Ventures"
-        width={1500}
-        height={600}
+        width={3250}
+        height={1300}
         priority={priority}
-        unoptimized
+        sizes="(max-width: 48rem) 88vw, 544px"
         className={styles.img}
       />
     </span>

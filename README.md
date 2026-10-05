@@ -25,6 +25,6 @@ npm run build      # production build
 ## TODO פתוחים
 
 - פלטת צבעים סופית — להזין ב־`tokens.css` בלבד.
-- לוגו עם רקע שקוף וקובץ favicon רשמי — להחליף (`public/brand/`, `src/app/icon.png`).
+- לוגו עם רקע שקוף (הנוכחי: PNG עם רקע לבן, `e-ventures-logo.png`) וקובץ favicon רשמי — להחליף (`public/brand/`, `src/app/icon.png`).
 - כתובות אתרים חיים (`websiteUrl`) ו־screenshots אמיתיים ב־`src/content/projects.ts`.
 - יעד לטופס הפנייה (`src/components/ContactForm.tsx`) — כרגע הטופס לא שולח דבר ומציג זאת למשתמש.
