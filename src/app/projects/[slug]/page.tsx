@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProject, getProjects } from "@/content/projects";
+import { site } from "@/content/site";
 import { ScreenGallery } from "@/components/ScreenGallery";
 import styles from "./page.module.css";
 
@@ -14,10 +15,23 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = getProject((await params).slug);
   if (!project) return {};
+  const path = `/projects/${project.slug}`;
+  const title = `${project.title} | ${site.name}`;
   return {
     title: project.title,
     description: project.shortDescription,
-    alternates: { canonical: `/projects/${project.slug}` },
+    alternates: { canonical: path },
+    // Page-level openGraph replaces the root one entirely, so shared fields are repeated here.
+    openGraph: {
+      type: "website",
+      locale: site.locale,
+      siteName: site.name,
+      title,
+      description: project.shortDescription,
+      url: path,
+      images: [{ url: "/brand/e-ventures-logo.png", width: 3250, height: 1300, alt: site.name }],
+    },
+    twitter: { card: "summary_large_image", title, description: project.shortDescription },
   };
 }
 
