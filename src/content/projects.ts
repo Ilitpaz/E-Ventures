@@ -73,8 +73,33 @@ export const projects: Project[] = [
             "image": "/screenshots/atnachta/atnachta-05-workshop-management.jpg",
             "title": "מההרשמה לניהול בפועל",
             "description": "ההרשמות מהאתר הופכות למידע תפעולי שמלווה את הסדנה ואת המשתתפים."
-      }
-],
+      },
+{
+      "image": "/screenshots/atnachta/atnachta-06-registration-flow.jpg",
+      "title": "תהליך הזמנה שנבנה סביב הסטודיו",
+      "description": "תהליך ההרשמה מחבר בין סוג הפעילות, זמינות המועדים וצרכי הסטודיו."
+},
+{
+      "image": "/screenshots/atnachta/atnachta-07-classes.jpg",
+      "title": "גם פעילות מתמשכת",
+      "description": "המערכת תומכת גם בחוגים ובמפגשים חוזרים, ולא רק בסדנאות חד־פעמיות."
+},
+{
+      "image": "/screenshots/atnachta/atnachta-08-messages.jpg",
+      "title": "התקשורת היא חלק מהמערכת",
+      "description": "עדכונים ותזכורות מנוהלים כחלק מתהליך העבודה ולא ככלי נפרד."
+},
+{
+      "image": "/screenshots/atnachta/atnachta-09-organizations.jpg",
+      "title": "גם העבודה מול ארגונים",
+      "description": "המערכת תומכת בתהליך העסקי מפנייה והצעת מחיר ועד לניהול הפעילות שהוזמנה."
+},
+{
+      "image": "/screenshots/atnachta/atnachta-10-work-tracking.jpg",
+      "title": "התהליך ממשיך גם אחרי הסדנה",
+      "description": "בעבודות קרמיקה המערכת ממשיכה לעקוב אחר העבודות גם לאחר שהמפגש הסתיים."
+}
+    ],
   },
   {
     slug: "e-team",
