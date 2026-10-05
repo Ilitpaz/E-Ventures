@@ -171,7 +171,38 @@ export const projects: Project[] = [
     status: "live",
     copyStatus: "draft",
     tags: ["חיפוש וגילוי", "תיירות ופנאי", "פלטפורמה פרסומית"],
-    screenshots: [],
+    screenshots: [
+      {
+            "image": "/screenshots/kalab/kalab-01-discovery.jpg",
+            "title": "לגלות מה יש לעשות באזור",
+            "description": "קל״ב מרכזת חוויות, מקומות ועסקים בצפון הנגב ומאפשרת להתחיל את החיפוש ממקום אחד."
+      },
+      {
+            "image": "/screenshots/kalab/kalab-02-search.jpg",
+            "title": "מחיפוש רחב לבחירה רלוונטית",
+            "description": "חיפוש, סינון וכרטיסי תוצאות מאפשרים לצמצם את האפשרויות ולמצוא פעילות או מקום שמתאימים למשתמש."
+      },
+      {
+            "image": "/screenshots/kalab/kalab-03-business-page.jpg",
+            "title": "מגילוי לפעולה",
+            "description": "עמוד העסק מרכז את המידע על המקום או החוויה ומוביל את המשתמש לפעולת ההמשך הרלוונטית."
+      },
+      {
+            "image": "/screenshots/kalab/kalab-04-business-admin.jpg",
+            "title": "גם לעסק יש צד משלו",
+            "description": "סביבת הניהול נותנת לבעל העסק מקום לנהל את הנוכחות שלו ואת המידע שמוצג לציבור."
+      },
+      {
+            "image": "/screenshots/kalab/kalab-05-business-edit.jpg",
+            "title": "המידע נשאר בשליטת העסק",
+            "description": "בעל העסק יכול לעדכן את הפרטים והתוכן שמרכיבים את הנוכחות שלו בפלטפורמה."
+      },
+      {
+            "image": "/screenshots/kalab/kalab-06-actions.jpg",
+            "title": "מהחשיפה לפעולה",
+            "description": "המערכת מאפשרת לחבר את הנוכחות של העסק לפעולות המשך רלוונטיות עבור המשתמשים."
+      }
+],
   },
 ];
 
