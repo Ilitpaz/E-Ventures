@@ -1,3 +1,6 @@
+/**
+ * Copy status: `site.slogan` is approved. Everything else in this file is DRAFT copy awaiting approval.
+ */
 export const site = {
   name: "E-Ventures",
   url: "https://e-ventures.co.il",
@@ -12,8 +15,8 @@ export const site = {
 export const about = {
   title: "מי עומדת מאחורי E-Ventures",
   paragraphs: [
-    "עילית פז היא יזמת, יוצרת ובעלת עסק. E-Ventures נולדה מתוך הצורך לפתח פתרונות דיגיטליים שמתחילים בעסק עצמו ולא בתבנית.",
-    "כל פרויקט מתחיל בהקשבה: מה העסק עושה, מי האנשים שעובדים איתו, ומה קורה בפועל מאחורי הקלעים. רק אחר כך מחליטים מה לבנות.",
+    "עילית היא יזמת, יוצרת ובעלת עסק, שמפתחת פתרונות דיגיטליים מתוך צרכים אמיתיים.",
+    "E-Ventures לא בונה אתר מתבנית. כל פרויקט מתחיל בחקירת הצורך והתהליך, ורק אחר כך בונים פתרון שמתאים לעסק ולאנשים שמשתמשים בו.",
   ],
   steps: [
     { title: "מתחילים מהצורך", text: "מה באמת צריך להשתנות או להיפתר, ולמי." },

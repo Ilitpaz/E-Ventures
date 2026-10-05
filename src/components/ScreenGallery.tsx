@@ -15,6 +15,14 @@ export function ScreenGallery({ screens }: { screens: Screenshot[] }) {
     el.scrollBy({ left: -dir * el.clientWidth * 0.8, behavior: "smooth" });
   }
 
+  if (screens.length === 0) {
+    return (
+      <p className={styles.empty}>
+        המסכים של הפרויקט יתווספו כאן.
+      </p>
+    );
+  }
+
   return (
     <div className={styles.wrap}>
       <div className={styles.arrows}>
@@ -28,7 +36,7 @@ export function ScreenGallery({ screens }: { screens: Screenshot[] }) {
               {s.image ? (
                 <Image src={s.image} alt={s.title} fill sizes="(max-width: 48rem) 80vw, 640px" />
               ) : (
-                <span className={styles.placeholder}>תמונת מסך — placeholder</span>
+                <span className={styles.placeholder}>תמונת מסך חסרה</span>
               )}
             </div>
             <figcaption>

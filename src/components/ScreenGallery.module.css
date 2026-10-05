@@ -19,3 +19,4 @@
   .arrows { display: flex; padding-inline: var(--gutter); }
   .item { flex-basis: 42rem; }
 }
+.empty { padding-inline: var(--gutter); color: var(--color-ink-faint); font-size: var(--text-sm); max-width: var(--container); margin-inline: auto; }

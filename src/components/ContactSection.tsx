@@ -1,3 +1,4 @@
+import { isContactConfigured } from "@/lib/contact";
 import { ContactForm } from "./ContactForm";
 
 export function ContactSection() {
@@ -7,7 +8,7 @@ export function ContactSection() {
         <p className="eyebrow">יצירת קשר</p>
         <h2 className="h-section">יש לך רעיון לאתר?</h2>
         <p className="lead narrow">ספרו בקצרה מה צריך להיבנות, ונתחיל משם.</p>
-        <ContactForm />
+        <ContactForm enabled={isContactConfigured()} />
       </div>
     </section>
   );

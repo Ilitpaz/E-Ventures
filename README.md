@@ -20,11 +20,13 @@ npm run build      # production build
 - `src/components/` — רכיבי UI.
 - `src/styles/tokens.css` — design tokens (צבעים, טיפוגרפיה, ריווח, רדיוסים). מקור אמת יחיד.
 - `public/brand/` — נכסי המותג. אין לשנות או לצייר מחדש.
-- `src/app/icon.png` — favicon (מחובר אוטומטית ע"י Next.js).
+- `src/app/icon.svg` — favicon ניטרלי וזמני (לא הפאביקון הרשמי). להחליף בקובץ הרשמי.
+- `src/lib/contact.ts` — יעד שליחת הטופס (כרגע לא מחובר; הטופס נעול עד שיוגדר).
 
 ## TODO פתוחים
 
 - פלטת צבעים סופית — להזין ב־`tokens.css` בלבד.
-- לוגו עם רקע שקוף (הנוכחי: PNG עם רקע לבן, `e-ventures-logo.png`) וקובץ favicon רשמי — להחליף (`public/brand/`, `src/app/icon.png`).
-- כתובות אתרים חיים (`websiteUrl`) ו־screenshots אמיתיים ב־`src/content/projects.ts`.
-- יעד לטופס הפנייה (`src/components/ContactForm.tsx`) — כרגע הטופס לא שולח דבר ומציג זאת למשתמש.
+- favicon רשמי — להחליף את `src/app/icon.svg`. הלוגו הנוכחי הוא `e-ventures-logo.png` (רקע לבן).
+- screenshots אמיתיים ב־`src/content/projects.ts` (`screenshots` ריק בכוונה; לא ממציאים מסכים).
+- טקסטים: רק הסלוגן מאושר. שאר הטקסטים טיוטה (`copyStatus: "draft"` בפרויקטים, הערה ב־`site.ts`).
+- יעד לטופס הפנייה: לממש `deliver` ו־`isContactConfigured` ב־`src/lib/contact.ts` כשתשתית המיילים תהיה מוכנה.

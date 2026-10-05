@@ -1,4 +1,7 @@
-export type ProjectStatus = "live" | "in-progress" | "placeholder";
+export type ProjectStatus = "live" | "in-progress";
+
+/** "approved" = confirmed by the owner; "draft" = working copy awaiting approval. */
+export type CopyStatus = "approved" | "draft";
 
 export interface Screenshot {
   /** Path under /public, or null while the screenshot is still a placeholder. */
@@ -15,18 +18,17 @@ export interface Project {
   audience: string;
   problem: string;
   solution: string;
-  /** TODO: live URL not provided yet — the link is hidden while null. */
   websiteUrl: string | null;
   contact?: { email?: string; phone?: string };
   featured: boolean;
   displayOrder: number;
   status: ProjectStatus;
+  /** Status of the descriptive copy below (problem / solution / longDescription). */
+  copyStatus: CopyStatus;
+  /** Empty until real screenshots (with known source) are provided — never invent screens. */
   tags: string[];
   screenshots: Screenshot[];
 }
-
-const placeholderShots = (titles: [string, string][]): Screenshot[] =>
-  titles.map(([title, description]) => ({ image: null, title, description }));
 
 export const projects: Project[] = [
   {
@@ -36,22 +38,17 @@ export const projects: Project[] = [
       "מערכת שנבנתה סביב עסק פעיל, ומחברת בין מה שהלקוחה רואה לבין מה שהעסק צריך לנהל מאחורי הקלעים.",
     longDescription:
       "אתר ציבורי ומערכת ניהול פנימית לעסק יחיד: שיווק ומכירה, הרשמות לסדנאות ולחוגים, ניהול לקוחות, תשלומים, תקשורת ותהליכים תפעוליים.",
-    audience: "לקוחות הסטודיו שמחפשים סדנאות וחוגים, ובעלת העסק שמנהלת את הפעילות.",
-    problem: "עסק פעיל שהיה צריך לחבר בין הפנייה והרישום של הלקוחה לבין העבודה התפעולית היומיומית.",
+    audience: "לקוחות הסטודיו ובעלת העסק שמנהלת אותו.",
+    problem: "עסק פעיל שמנהל שיווק ומכירה, הרשמות, לקוחות, תשלומים ותקשורת — ושצריך לחבר בין מה שהלקוחה רואה לבין מה שקורה מאחורי הקלעים.",
     solution:
-      "אתר ציבורי ומערכת ניהול פנימית שעובדים יחד: הרשמות, לקוחות, תשלומים ותקשורת במקום אחד.",
-    websiteUrl: null,
+      "אתר ציבורי יחד עם מערכת ניהול פנימית, שנבנו סביב העסק הפעיל.",
+    websiteUrl: "https://www.studio-atnachta.co.il",
     featured: true,
     displayOrder: 1,
-    status: "placeholder",
+    status: "live",
+    copyStatus: "draft",
     tags: ["אתר ציבורי", "ניהול פנימי", "הרשמות", "תשלומים"],
-    screenshots: placeholderShots([
-      ["עמוד הבית", "הכניסה לסטודיו: מה מציעים ואיך מתחילים."],
-      ["סדנאות וחוגים", "הלקוחה רואה מה קיים ובוחרת איך להצטרף."],
-      ["הרשמה ותשלום", "תהליך הרשמה שמסתיים בתשלום, בלי לצאת מהאתר."],
-      ["ניהול לקוחות", "בעלת העסק רואה מי נרשם, ולמה."],
-      ["תקשורת ותפעול", "הודעות ותהליכים תפעוליים מנוהלים מאותה מערכת."],
-    ]),
+    screenshots: [],
   },
   {
     slug: "e-team",
@@ -60,19 +57,16 @@ export const projects: Project[] = [
       "מערכת ניהול ארגונית שמחברת צוותים פנימיים וספקים חיצוניים.",
     longDescription:
       "מערכת רב־משתמשים לארגונים ולקוחות קצה: פרויקטים ומשימות, ספקים, בקשות והצעות מחיר, תקציבים ותהליכי עבודה בין גורמים שונים.",
-    audience: "ארגונים, הצוותים הפנימיים שלהם, לקוחות הקצה והספקים החיצוניים.",
-    problem: "עבודה בין כמה גורמים שונים — צוות, ספקים ולקוחות — בלי מקום אחד שמחבר ביניהם.",
-    solution: "מערכת אחת שבה כל גורם רואה את החלק שלו בתהליך: משימות, בקשות, הצעות מחיר ותקציבים.",
-    websiteUrl: null,
+    audience: "ארגונים, לקוחות הקצה שלהם, צוותים פנימיים וספקים.",
+    problem: "ארגונים שעובדים מול צוותים פנימיים, ספקים חיצוניים ולקוחות קצה, ומנהלים פרויקטים, בקשות, הצעות מחיר ותקציבים.",
+    solution: "מערכת ניהול רב־משתמשים שמחברת צוותים פנימיים וספקים חיצוניים.",
+    websiteUrl: "https://e-team.co.il",
     featured: false,
     displayOrder: 2,
-    status: "placeholder",
+    status: "live",
+    copyStatus: "draft",
     tags: ["רב־משתמשים", "פרויקטים", "ספקים", "תקציבים"],
-    screenshots: placeholderShots([
-      ["פרויקטים ומשימות", "תמונה אחת של מה קורה ומי אחראי על מה."],
-      ["בקשות והצעות מחיר", "בקשה נשלחת לספקים וההצעות חוזרות לאותו מקום."],
-      ["תקציבים", "מעקב אחר התקציב לאורך הפרויקט."],
-    ]),
+    screenshots: [],
   },
   {
     slug: "kalab",
@@ -81,18 +75,16 @@ export const projects: Project[] = [
       "פלטפורמה ציבורית שמשרתת מצד אחד את הציבור ומצד שני את העסקים שמוצגים בה.",
     longDescription:
       "פלטפורמה לחיפוש וגילוי עסקים בתחום התיירות והפנאי, שמחברת בין קהל פרטי רחב לבין העסקים, ומשמשת גם כפלטפורמה פרסומית עבורם.",
-    audience: "הציבור הרחב שמחפש עסקי תיירות ופנאי, והעסקים שרוצים להיות מוצגים.",
-    problem: "קשה למצוא עסקי תיירות ופנאי במקום אחד, וקשה לעסקים להגיע לקהל הנכון.",
-    solution: "פלטפורמה עם חיפוש וגילוי למשתמשים, ומקום תצוגה פרסומי לעסקים.",
-    websiteUrl: null,
+    audience: "קהל פרטי רחב, ועסקים מתחום התיירות והפנאי.",
+    problem: "פלטפורמה אחת שצריכה לשרת גם קהל פרטי רחב שמחפש עסקים, וגם את העסקים שמוצגים בה.",
+    solution: "פלטפורמה ציבורית עם חיפוש וגילוי, שמשמשת גם פלטפורמה פרסומית לעסקי תיירות ופנאי.",
+    websiteUrl: "https://kalab.co.il",
     featured: false,
     displayOrder: 3,
-    status: "placeholder",
+    status: "live",
+    copyStatus: "draft",
     tags: ["חיפוש וגילוי", "תיירות ופנאי", "פלטפורמה פרסומית"],
-    screenshots: placeholderShots([
-      ["חיפוש וגילוי", "המשתמש מוצא עסקים לפי מה שמעניין אותו."],
-      ["עמוד עסק", "העסק מציג את עצמו מול הקהל."],
-    ]),
+    screenshots: [],
   },
 ];
 

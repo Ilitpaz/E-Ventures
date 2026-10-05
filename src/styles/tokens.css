@@ -1,7 +1,8 @@
 /*
  * E-Ventures design tokens — single source of truth.
- * Palette: monochrome base of the brand (white / black / soft greys).
- * TODO: the final brand HEX values have not been provided. Update ONLY here.
+ * PROVISIONAL VALUES: neutral white / black / grey placeholders so the layout can be reviewed.
+ * They are NOT the approved E-Ventures palette or type choice (Heebo / Frank Ruhl Libre are
+ * stand-ins too). Replace the final brand colors and fonts here only.
  */
 :root {
   /* color */
