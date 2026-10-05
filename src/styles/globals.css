@@ -37,3 +37,9 @@ p { margin: 0 0 var(--space-4); }
 .btn--solid:hover { background: transparent; color: var(--color-ink); }
 
 .botanical-rule { border: 0; border-top: var(--border-thin); margin: 0; }
+
+main:focus { outline: none; }
+.skip-link { position: absolute; inset-inline-start: var(--space-3); top: -4rem; z-index: 20; background: var(--color-ink); color: var(--color-bg); padding: var(--space-2) var(--space-4); border-radius: var(--radius-sm); }
+.skip-link:focus { top: var(--space-3); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

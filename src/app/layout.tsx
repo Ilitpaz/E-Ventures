@@ -17,8 +17,9 @@ export const metadata: Metadata = {
     title: `${site.name} — ${site.slogan}`,
     description: site.description,
     url: "/",
-    images: [{ url: "/brand/e-ventures-logo.png", alt: site.name }],
+    images: [{ url: "/brand/e-ventures-logo.png", width: 3250, height: 1300, alt: site.name }],
   },
+  twitter: { card: "summary_large_image", title: `${site.name} — ${site.slogan}`, description: site.description },
   // Favicon: src/app/icon.png (botanical illustration, unmodified file supplied by the owner) is picked up automatically by Next.js.
   robots: { index: true, follow: true },
 };
@@ -29,8 +30,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="he" dir="rtl" className={fontClassName}>
       <body>
+        <a href="#main" className="skip-link">דילוג לתוכן</a>
         <Header />
-        <main>{children}</main>
+        <main id="main" tabIndex={-1}>{children}</main>
         <Footer />
       </body>
     </html>

@@ -12,3 +12,4 @@
   .list { grid-template-columns: 1fr 1fr; column-gap: var(--space-7); }
   .featured { grid-column: 1 / -1; }
 }
+.links { display: flex; flex-wrap: wrap; gap: var(--space-5); }

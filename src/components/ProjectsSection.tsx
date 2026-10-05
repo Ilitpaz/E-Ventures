@@ -17,9 +17,16 @@ export function ProjectsSection() {
               <ul className={styles.tags}>
                 {p.tags.map((t) => <li key={t}>{t}</li>)}
               </ul>
-              <Link href={`/projects/${p.slug}`} className={styles.more}>
-                לסיפור הפרויקט ←
-              </Link>
+              <div className={styles.links}>
+                <Link href={`/projects/${p.slug}`} className={styles.more}>
+                  לסיפור הפרויקט ←
+                </Link>
+                {p.websiteUrl && (
+                  <a href={p.websiteUrl} className={styles.more} target="_blank" rel="noopener noreferrer">
+                    לאתר החי<span className="sr-only"> של {p.title} (נפתח בלשונית חדשה)</span>
+                  </a>
+                )}
+              </div>
             </li>
           ))}
         </ul>
