@@ -44,18 +44,18 @@ export function ContactForm({ enabled }: { enabled: boolean }) {
             <input name="email" type="email" required autoComplete="email" dir="ltr" />
           </label>
         </div>
-        <label>מה תרצו לבנות?
+        <label>מה צריך לבנות?
           <select name="kind" required defaultValue="">
             <option value="" disabled>בחרו</option>
-            <option value="landing">דף נחיתה חדש</option>
-            <option value="brand-site">אתר תדמית חדש</option>
-            <option value="custom">אתר מותאם לצורך עסקי</option>
+            <option value="landing">אתר או עמוד ממוקד</option>
+            <option value="brand-site">אתר עם תהליך הרשמה או הזמנה</option>
+            <option value="custom">מערכת ניהול או מוצר דיגיטלי</option>
           </select>
         </label>
-        <label>תיאור חופשי
+        <label>מה הצורך או הבעיה שצריך לפתור?
           <textarea name="details" rows={4} />
         </label>
-        <label>האם כבר קיים עסק / מותג / אתר?
+        <label>מה כבר קיים היום?
           <select name="existing" defaultValue="">
             <option value="" disabled>בחרו</option>
             <option value="business">יש עסק</option>
